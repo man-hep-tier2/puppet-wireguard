@@ -14,6 +14,7 @@ class wireguard::params {
     'Rocky': {
       $manage_repo    = false
       $package_name   = ['wireguard-tools']
+      $repo_url       = ''
     }
     'Ubuntu': {
       $manage_repo    = false
