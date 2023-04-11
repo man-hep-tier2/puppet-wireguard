@@ -26,6 +26,7 @@ class wireguard::install (
           creates => '/etc/yum.repos.d/wireguard.repo',
         }
       }
+      'Rocky': {}
       'Ubuntu': {
         include apt
         apt::ppa { $repo_url: }
@@ -54,6 +55,7 @@ class wireguard::install (
         default => undef,
       }
     }
+    'Rocky': {}
     'Ubuntu': {
       $_require = $manage_repo ? {
         true    => Apt::Ppa[$repo_url],

@@ -11,6 +11,10 @@ class wireguard::params {
       $package_name   = ['wireguard-dkms', 'wireguard-tools']
       $repo_url       = 'https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo'
     }
+    'Rocky': {
+      $manage_repo    = false
+      $package_name   = ['wireguard-tools']
+    }
     'Ubuntu': {
       $manage_repo    = false
       $package_name   = ['wireguard']
