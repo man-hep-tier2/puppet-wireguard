@@ -55,7 +55,7 @@ class wireguard::install (
         default => undef,
       }
     }
-    'Rocky': {}
+    'Rocky': { $_require = undef }
     'Ubuntu': {
       $_require = $manage_repo ? {
         true    => Apt::Ppa[$repo_url],
