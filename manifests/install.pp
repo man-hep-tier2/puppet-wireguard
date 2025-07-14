@@ -27,6 +27,7 @@ class wireguard::install (
         }
       }
       'Rocky': {}
+      'AlmaLinux': {}
       'Ubuntu': {
         include apt
         apt::ppa { $repo_url: }
@@ -56,6 +57,7 @@ class wireguard::install (
       }
     }
     'Rocky': { $_require = undef }
+    'AlmaLinux': { $_require = undef }
     'Ubuntu': {
       $_require = $manage_repo ? {
         true    => Apt::Ppa[$repo_url],
