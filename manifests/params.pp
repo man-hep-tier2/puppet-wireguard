@@ -16,7 +16,7 @@ class wireguard::params {
       $package_name   = ['wireguard-tools']
       $repo_url       = ''
     }
-    'AlmaLinux' {
+    'AlmaLinux': {
       $manage_repo    = false
       $package_name   = ['wireguard-tools']
       $repo_url       = ''
